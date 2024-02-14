@@ -4,3 +4,34 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+.page.theme-dark {
+  --text-color: #00cc14;
+  --background-color: #000;
+  --hover-color: 0, 204, 20, 0.5;
+  --font-weight-regular: 465;
+  --font-weight-bold: 785;
+  --background-image: url(../svg/pattern-dark.svg);
+  --heart-contour-color: #00cc14;
+}
+
+.page.theme-light {
+  --text-color: #000;
+  --background-color: #fff;
+  --hover-color: 0, 0, 0, 0.5;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --background-image: url(../svg/pattern-light.svg);
+  --heart-contour-color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #00cc14;
+    --background-color: #000;
+    --hover-color: 0, 204, 20, 0.5;
+    --font-weight-regular: 465;
+    --font-weight-bold: 785;
+    --background-image: url(../svg/pattern-dark.svg);
+    --heart-contour-color: #00cc14;
+  }
+}

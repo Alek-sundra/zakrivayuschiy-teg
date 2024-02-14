@@ -1,1 +1,17 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+/*  и 50% opacity for black color*/
+:root {
+  --text-color: #000;
+  --background-color: #fff;
+  --hover-color: 0, 0, 0, 0.6;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-family-titles: "PressStart2P-Regular", sans-serif;
+  --font-family-main: "Inter-Variable", sans-serif;
+
+  --background-image: url(../svg/pattern-light.svg);
+
+  --heart-contour-color: #000;
+  --heart-main-color: red;
+}

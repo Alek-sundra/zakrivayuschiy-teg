@@ -12,3 +12,30 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+@keyframes triangel {
+  from {
+    inset-inline-start: -22px;
+  }
+  to {
+    inset-inline-start: -18px;
+  }
+}
+
+@keyframes big-heart {
+  from {
+    scale: 1;
+  }
+
+  to {
+    scale: 1.5;
+  }
+}
+
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
