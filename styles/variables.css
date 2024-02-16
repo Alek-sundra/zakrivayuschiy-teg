@@ -7,7 +7,7 @@
 
   --font-weight-regular: 400;
   --font-weight-bold: 700;
-  --font-family-titles: "PressStart2P-Regular", sans-serif;
+  --font-family-titles: "PressStart2P-Regular", "fantasy";
   --font-family-main: "Inter-Variable", sans-serif;
 
   --background-image: url(../svg/pattern-light.svg);

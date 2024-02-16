@@ -29,7 +29,7 @@
 }
 
 button {
-  font-family: var(--font-family-titles, "PressStart2P-Regular", sans-serif);
+  font-family: var(--font-family-titles, "PressStart2P-Regular", "fantasy");
   font-weight: 400;
   font-size: 14px;
 }
@@ -45,19 +45,18 @@ button {
   margin-block: 100px;
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   padding-block-end: 25px;
-  font-family: var(--font-family-titles, "PressStart2P-Regular", sans-serif);
+  font-family: var(--font-family-titles, "PressStart2P-Regular", "fantasy");
   line-height: 1;
   text-align: center;
 }
 
-.header__main-title {
-  margin-block-end: 20px;
+.header__logo-link {
   font-weight: 400;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .header__title {
-  margin-block-end: 25px;
+  margin-block: 20px 25px;
   font-weight: 400;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
@@ -77,6 +76,7 @@ button {
 .theme-menu__button {
   position: relative;
   text-transform: uppercase;
+  transition: color 0.3s;
 }
 
 .theme-menu__button:disabled {
@@ -87,7 +87,6 @@ button {
 .theme-menu__button:hover,
 .theme-menu__button:focus {
   color: rgba(var(--hover-color));
-  transition: color 0.3s;
 }
 
 .theme-menu__button::after {
@@ -95,15 +94,15 @@ button {
   position: absolute;
   display: block;
   background-color: rgba(var(--hover-color));
+  transition: transform 0.3s;
   transform: scale(0);
   inset-inline-start: 0;
-  inset-block-end: 0;
+  inset-block-end: -2px;
   inline-size: 100%;
   block-size: 2px;
 }
 
 .theme-menu__button:focus-visible::after {
-  transition: transform 0.3s;
   transform: scale(1);
   transform-origin: left;
 }
@@ -113,10 +112,15 @@ button {
   position: absolute;
   animation: triangel infinite ease-in-out 0.5s alternate;
   inset-inline-start: -22px;
+  inset-block-start: 0;
+}
+
+.card {
+  margin-inline: auto;
+  max-inline-size: clamp(375px, 100vw, 700px);
 }
 
 .card__title {
-  border-bottom: solid 2px var(--text-color, #000);
   padding-inline: 10px;
   padding-block: 2px 0;
   font-size: 18px;
@@ -136,29 +140,31 @@ button {
   display: block;
   width: 100%;
   height: 100%;
+  border-inline: solid 2px var(--text-color, #000);
   object-fit: cover;
   object-position: center;
 }
 
-.card__section {
-  border-top: solid 2px var(--text-color, #000);
+.card__text-section {
+  border-block-end: none;
   padding: 25px;
 }
 
 .card__paragraph {
-  margin-block-end: 27px;
   line-height: 1.17;
   font-variation-settings: "wght" var(--font-weight-regular, 400);
 }
 
-.card__paragraph:last-of-type {
-  margin-block-end: 25px;
+.card__paragraph:not(:last-child) {
+  margin-block-end: 27px;
 }
 
 .card__buttons-block {
   display: flex;
   justify-content: end;
   gap: 4px;
+  border-block-start: none;
+  padding: 0 25px 25px 25px;
 }
 
 .card__pic-heart {
@@ -167,80 +173,11 @@ button {
 
 .card__icon-button {
   border: solid 2px transparent;
-}
-
-.core {
-  fill: var(--background-color, #fff);
-  transition: fill 0.3s;
-  transition-delay: 0.03s;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--text-color, #000);
-  transition: fill 0.3s;
-}
-
-.card__icon-button:active .core {
-  fill: var(--heart-main-color, red);
-  transition: fill 0.3s;
-}
-
-.main-body {
-  fill: var(--background-color, #fff);
-  transition: fill 0.3s;
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--text-color, #000);
-  transition: fill 0.3s;
-  transition-delay: 0.05s;
-}
-
-.card__icon-button:active .main-body {
-  fill: var(--heart-main-color, red);
-  transition: fill 0.3s;
-  transition-delay: 0.05s;
-}
-
-.like-icon.is-liked .core {
-  fill: var(--heart-main-color, red);
-  transition: fill 0.3s;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--heart-main-color, red);
-  transition: fill 0.3s;
-  transition-delay: 0.05s;
-}
-
-.countour {
-  fill: var(--text-color, #000);
-  transition: fill 0.1s;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--heart-main-color, red);
-  transition: fill 0.3s;
-  transition-delay: 0.06s;
-}
-
-.like-icon.is-liked .heart {
-  animation: big-heart ease-in 0.3s alternate;
-  animation-delay: 0.1s;
-}
-
-.sparks {
-  opacity: 0;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparks ease-in 0.3s alternate;
-  animation-delay: 0.3s;
+  transition: border-color 0.3s;
 }
 
 .card__icon-button:focus-visible {
   border-color: var(--text-color);
-  transition: border-color 0.3s;
 }
 
 .card__like-button {
@@ -255,6 +192,7 @@ button {
   z-index: 1;
   overflow: hidden;
   transition: box-shadow 0.3s;
+  transition: color 1s;
 }
 
 .button-action:focus,
@@ -265,7 +203,6 @@ button {
 .button-action:hover {
   z-index: 2;
   color: var(--background-color, #fff);
-  transition: color 1s;
 }
 
 .button-action::before {
@@ -275,27 +212,23 @@ button {
   z-index: -1;
   display: block;
   background-color: var(--text-color, #000);
+  transition: transform 0.5s ease-in-out;
   transform: translateX(-100%);
   block-size: 100%;
   inline-size: 100%;
 }
 
 .button-action:hover::before {
-  transition: transform 0.5s ease-in-out;
   transform: translateX(0);
 }
 
-.footer {
-  padding-block: 50px 100px;
-}
-
-.footer__button {
+.card__save-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin: 0 auto;
+  margin-block: 50px 100px;
   padding-block: 15px;
   inline-size: clamp(19.375rem, 18.7368rem + 2.723vw, 21.1875rem);
 
@@ -304,7 +237,7 @@ button {
   }
 }
 
-.footer__pic-floppy {
+.card__pic-floppy {
   max-inline-size: 28px;
   max-block-size: 28px;
 
