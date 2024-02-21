@@ -352,8 +352,11 @@ button {
   line-height: 1.5;
 }
 
-.dialog__button_ok {
+.dialog__close {
   grid-column: 1/-1;
+}
+
+.dialog__button_ok {  
   width: 100%;
   padding-block: 10px;
 }

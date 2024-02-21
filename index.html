@@ -581,13 +581,12 @@
         <p class="dialog__text" id="dialog-name">
           Вставьте дискету, чтобы продолжить
         </p>
-        <button
-          class="dialog__button_ok button-action"
-          type="button"
-          onclick="window['card__dialog'].close()"
-        >
-          <span class="button__text">ок</span>
-        </button>
+        <form method="dialog" class="dialog__close">
+          <button class="dialog__button_ok button-action">
+            <span class="button__text">ок</span>
+            <span class="visually-hidden">Закрыть окно</span>
+          </button>
+        </form>
       </dialog>
     </main>
     <script src="./scripts/set-theme.js"></script>
