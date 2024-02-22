@@ -29,7 +29,7 @@
 }
 
 button {
-  font-family: var(--font-family-titles, "PressStart2P-Regular", "fantasy");
+  font-family: var(--font-family-titles, "PressStart2P", "fantasy");
   font-weight: 400;
   font-size: 14px;
 }
@@ -45,7 +45,7 @@ button {
   margin-block: 100px;
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   padding-block-end: 25px;
-  font-family: var(--font-family-titles, "PressStart2P-Regular", "fantasy");
+  font-family: var(--font-family-titles, "PressStart2P", "fantasy");
   line-height: 1;
   text-align: center;
 }
@@ -120,7 +120,7 @@ button {
   max-inline-size: clamp(375px, 100vw, 700px);
 }
 
-.card__section:not(:last-of-type) {
+.card__article:not(:last-of-type) {
   margin-block-end: 50px;
 }
 
@@ -140,7 +140,7 @@ button {
   display: inline-block;
 }
 
-.card__section-image {
+.card__article-image {
   position: relative;
   border-inline: solid 2px var(--text-color, #000);
 }
@@ -149,7 +149,7 @@ button {
   position: absolute;
   z-index: 2;
   opacity: 0.5;
-  font-family: var(--font-family-titles, "PressStart2P-Regular", "fantasy");
+  font-family: var(--font-family-titles, "PressStart2P", "fantasy");
   font-weight: 400;
   font-size: 14px;
   text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
@@ -210,7 +210,7 @@ button {
   filter: contrast(120%) saturate(500%) hue-rotate(0.5turn);
 }
 
-.card__text-section {
+.card__text-article {
   border-block-end: none;
   padding: 25px;
 }
@@ -258,7 +258,7 @@ button {
   overflow: hidden;
   color: var(--button-action-color, #fff);
   background-color: var(--background-color, #fff);
-  transition: box-shadow 0.3s, color 1s;
+  transition: box-shadow 0.3s;
 }
 
 .button__text {
@@ -346,7 +346,7 @@ button {
 }
 
 .dialog__text {
-  font-family: var(--font-family-titles, "PressStart2P-Regular", "fantasy");
+  font-family: var(--font-family-titles, "PressStart2P", "fantasy");
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;

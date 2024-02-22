@@ -62,7 +62,9 @@ button {
 }
 
 button:focus,
-button:focus-visible {
+button:focus-visible,
+a:focus,
+a:focus-visible {
   outline: none;
 }
 
