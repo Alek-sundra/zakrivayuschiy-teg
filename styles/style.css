@@ -29,7 +29,7 @@
 }
 
 button {
-  font-family: var(--font-family-titles, "PressStart2P", "fantasy");
+  font-family: var(--font-family-titles, "PressStart2P", fantasy);
   font-weight: 400;
   font-size: 14px;
 }
@@ -45,7 +45,7 @@ button {
   margin-block: 100px;
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   padding-block-end: 25px;
-  font-family: var(--font-family-titles, "PressStart2P", "fantasy");
+  font-family: var(--font-family-titles, "PressStart2P", fantasy);
   line-height: 1;
   text-align: center;
 }
@@ -149,7 +149,7 @@ button {
   position: absolute;
   z-index: 2;
   opacity: 0.5;
-  font-family: var(--font-family-titles, "PressStart2P", "fantasy");
+  font-family: var(--font-family-titles, "PressStart2P", fantasy);
   font-weight: 400;
   font-size: 14px;
   text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
@@ -346,10 +346,11 @@ button {
 }
 
 .dialog__text {
-  font-family: var(--font-family-titles, "PressStart2P", "fantasy");
+  font-family: var(--font-family-titles, "PressStart2P", fantasy);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .dialog__close {
@@ -359,4 +360,5 @@ button {
 .dialog__button_ok {
   width: 100%;
   padding-block: 10px;
+  text-transform: uppercase;
 }
